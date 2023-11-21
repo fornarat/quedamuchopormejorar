@@ -25,14 +25,21 @@ public class CountNicePairsInAnArray {
             }
             map.merge(v,1, Integer::sum);
         }
-        return (int) (acc % Math.pow(10,9)) + 7;
+        return (int) (acc % (Math.pow(10,9) + 7));
     }
 
-    private int rev(Integer v){
+    private int revSlow(Integer v){
         String reversed = new StringBuilder(v.toString()).reverse().toString();
         return Integer.parseInt(reversed);
     }
 
-    // aplicar módulo
+    private  int rev(int num) {
+        int rev = 0;
+        while(num>0){
+            rev = rev*10 + num%10;
+            num/=10;
+        }
+        return rev;
+    }
 
 }
