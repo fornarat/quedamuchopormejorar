@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Set;
 
 // https://leetcode.com/problems/arithmetic-subarrays
-public class AritmethicSubarray {
+public class ArithmeticSubarray {
 
     public List<Boolean> checkArithmeticSubarrays(int[] nums, int[] l, int[] r) {
         List<Boolean> results = new ArrayList<>();
